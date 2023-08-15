@@ -67,27 +67,41 @@ console.log('array of employee data: ', employees);
 
 function calculateIndividualEmployeeBonus(staffName) {
   // your logic here
-  for (let aEmployee of employees) {
-
-    console.log(aEmployee.name);
-
-    let bonusPercentage = 0;
-    let totalBonus = aEmployee.annualSalary * bonusPercentage;
-    let totalCompensation = aEmployee.annualSalary + totalBonus;
-    for (i = 0; i < aEmployee.length; i++) {
-
-      if (aEmployee.name === staffName && aEmployee.reviewRating === 3) {
-        bonusPercentage = 0.04;
+  for (let staff of )
+    for (let aEmployee of employees) {
+      console.log(aEmployee);
+      let bonusPercentage = 0;
+      let totalBonus = aEmployee.annualSalary * bonusPercentage;
+      let totalCompensation = parseInt(aEmployee.annualSalary) + totalBonus;
+      if (aEmployee.name === staffName && aEmployee.reviewRating === 2) {
+        bonusPercentage = 0.00;
+        totalBonus = aEmployee.annualSalary * bonusPercentage;
+        totalCompensation = parseInt(aEmployee.annualSalary) + totalBonus;
       }
+      else if (aEmployee.name === staffName && aEmployee.reviewRating === 3) {
+        bonusPercentage = 0.04;
+        totalBonus = aEmployee.annualSalary * bonusPercentage;
+        totalCompensation = parseInt(aEmployee.annualSalary) + totalBonus;
+      }
+      else if (aEmployee.name === staffName && aEmployee.reviewRating === 4) {
+        bonusPercentage = 0.06;
+        totalBonus = aEmployee.annualSalary * bonusPercentage;
+        totalCompensation = parseInt(aEmployee.annualSalary) + totalBonus;
+      }
+      else if (aEmployee.name === staffName && aEmployee.reviewRating === 5) {
+        bonusPercentage = 0.10;
+        totalBonus = aEmployee.annualSalary * bonusPercentage;
+        totalCompensation = parseInt(aEmployee.annualSalary) + totalBonus;
+      }
+      return totalCompensation;
     }
-    console.log(totalCompensation);
-    console.log(totalBonus);
-  }
-
-  // return new object with bonus results
 }
-
+// return new object with bonus results
 console.log(calculateIndividualEmployeeBonus("Atticus"));
+console.log(calculateIndividualEmployeeBonus("Jem"));
+console.log(calculateIndividualEmployeeBonus("Scout"));
+console.log(calculateIndividualEmployeeBonus("Robert"));
+
 // console.log(calculateIndividualEmployeeBonus("Atticus"));
 
   // employees[0]
